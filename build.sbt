@@ -1,8 +1,6 @@
-name := "lojinha"
+name := """lojinha"""
 
 version := "1.0-SNAPSHOT"
-
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.6"
 
@@ -18,6 +16,8 @@ libraryDependencies ++= Seq(
   "postgresql"        %  "postgresql"   % "9.1-901.jdbc4" % "runtime",
   "org.mockito"       %  "mockito-core" % "1.10.19"       % "test"
 )
+
+lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 TwirlKeys.templateImports ++= Seq(
   "models.dao._"
